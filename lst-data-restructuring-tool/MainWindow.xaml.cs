@@ -24,5 +24,10 @@ namespace lst_data_restructuring_tool
         {
             InitializeComponent();
         }
+
+        private void _Click(object sender, EventArgs e)
+        {
+            OutputTextBox.Text = "Tesssssssst";
+        }
     }
 }

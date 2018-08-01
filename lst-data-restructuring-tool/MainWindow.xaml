@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lst_data_restructuring_tool"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="450" MinWidth="800">
+        Title="MainWindow" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
     <StackPanel Orientation="Horizontal">
-        <StackPanel Width="114" Margin="7">
+        <StackPanel Width="114" Margin="7" MinHeight="256">
 
-            <Button Name="ButtonForTesting" Content="TEST!" />
+            <Button Name="ButtonForTesting" Click="_Click" Content="TEST!" />
         </StackPanel>
         <Separator Width="3" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
 
-        <TextBlock  Name="OutputTextBox" />
+        <TextBlock  Name="OutputTextBox" Text="TEST!" Width="512" />
 
     </StackPanel>
 </Window>
