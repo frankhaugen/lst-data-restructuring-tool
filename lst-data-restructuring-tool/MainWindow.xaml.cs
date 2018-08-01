@@ -29,5 +29,10 @@ namespace lst_data_restructuring_tool
         {
             OutputTextBox.Text = "Tesssssssst";
         }
+
+        // Android		SORTKEY:A_PlayableRace	FACT:BaseSize|M	SOURCEPAGE:p.42	RACETYPE:Humanoid		GROUP:RaceType_Humanoid		TYPE:Humanoid	MODIFY:RaceType_Humanoid|SET|True		RACESUBTYPE:Android	MOVE:Walk,0	GRANT:MOVEMENT|Walk	MODIFYOTHER:PC.MOVEMENT|Walk|Speed|SET|30	BONUS:VAR|Walk|30	MODIFY:Race_Legs|ADD|2	STARTFEATS:1	BONUS:STAT|DEX,INT|2	BONUS:STAT|CHA|-2								ABILITY:Race|AUTOMATIC|Android																			KIT:1|Playable Race Defaults	AUTO:LANG|Common					LANGBONUS:TYPE=Spoken
+
+        
+
     }
 }
