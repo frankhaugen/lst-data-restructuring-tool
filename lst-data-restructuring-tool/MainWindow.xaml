@@ -6,14 +6,36 @@
         xmlns:local="clr-namespace:lst_data_restructuring_tool"
         mc:Ignorable="d"
         Title="MainWindow" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="7,3,7,3" />
+        </Style>
+    </Window.Resources>
     <StackPanel Orientation="Horizontal">
-        <StackPanel Width="114" Margin="7" MinHeight="256">
-
-            <Button Name="ButtonForTesting" Click="_Click" Content="TEST!" />
+        <StackPanel Width="114" MinHeight="256">
+            <GroupBox Header="Source file path">
+                <TextBox Name="textBoxPath" TextChanged="TextBoxPath_TextChanged" Background="LightPink" IsReadOnly="True" />
+            </GroupBox>
+            <Button Name="ButtonSelectFile" Click="ButtonSelectFile_Click" Content="Select file" />
+            <Button Name="ButtonDisplayContents" Click="ButtonDisplayContents_Click" Content="Display contents" IsEnabled="False" />
+            <Button Name="ButtonManipulateContents" Click="ButtonManipulateContents_Click" Content="Manipulate contents" IsEnabled="False" />
         </StackPanel>
         <Separator Width="3" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
 
-        <TextBlock  Name="OutputTextBox" Text="TEST!" Width="512" />
+        <StackPanel>
+            <GroupBox Header="Source" Margin="3">
+                <ScrollViewer Width="512" Height="256" HorizontalScrollBarVisibility="Auto">
+                    <TextBlock  Name="TextBoxSource" />
+                </ScrollViewer>
+            </GroupBox>
+            <Separator Height="3" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <GroupBox Header="modified" Margin="3">
+                <ScrollViewer Width="512" Height="256" HorizontalScrollBarVisibility="Auto">
+                    <TextBlock  Name="TextBoxEdited"  />
+                </ScrollViewer>
+            </GroupBox>
+        </StackPanel>
+        
 
     </StackPanel>
 </Window>
